@@ -1,68 +1,65 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es">
 <head>
-     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> (title)</title>
+	<title>LLAJTA TOUR</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="loans HTML Template">
+	<meta name="keywords" content="loans, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<!-- BOOTSTRAP STYLES-->
-    <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet" />
-     <!-- FONTAWESOME STYLES-->
-    <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" />  
-        <!-- CUSTOM STYLES-->
-    <link href="<?php echo base_url(); ?>assets/css/custom.css" rel="stylesheet" />
-     <!-- TABLE STYLES-->
-    <link href="<?php echo base_url(); ?>assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
-	<style>
-	.jumbotron2 {
-    position: relative;
-    background: #fff center center;
-    width: 100%;
-    height: 80px;
-    background-size: cover;
-    overflow: hidden;
-	}
+	<!-- Favicon -->
+	<link href=" <?php echo base_url();?>assets/Llajta/img/favicon.ico" rel="shortcut icon"/>
 
-    .footer {
-   position: button;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 55px;
-   background-color: black;
-   color: white;
-   text-align: center;
-	}
-	</style>
+	<!-- Google font -->
+	<link href=" <?php echo base_url();?>assets/Llajta/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap," rel="stylesheet">
+ 	<link href=" <?php echo base_url();?>assets/Llajta/https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/all.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/flaticon.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/slicknav.min.css"/>
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/style.css"/>
+
 </head>
 <body>
-<!-- ========================================================================================================================================================-->   
 
-<div class="jumbotron2">
-  <div class="container text-center">
-    <h1> </h1>   
-  </div>
-</div>
+<!-- Page Preloder -->
+<div id="preloder">
+		<div class="loader"></div>
+	</div>
 
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="<?php echo base_url(); ?>"><i class="fa fa-home"></i>Menu 1</a></li>
-        <li><a href="#">menu 2</a></li>
-        <li><a href="#">menu 3</a></li>
-        <li><a href="#">menu 4</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <li><a href="<?=base_url('login')?>"><i class="fa fa-users"></i>login<span></span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+	<!-- Header Section -->
+	<header class="header-section">
+		<a href=" <?php echo base_url();?>assets/Llajta/index.html" class="site-logo">
+			<img src="<?php echo base_url();?>assets/Llajta/img/logoBC.png" alt="">
+		</a>
+		<nav class="header-nav">
+			<ul class="main-menu">
+				<li><a href=" <?php echo base_url();?>assets/Llajta/index.html" class="active">Inicio</a></li>
+				<li><a href=" <?php echo base_url();?>assets/Llajta/index.html">Acerca de nosotros</a></li>
+				<li><a href=" <?php echo base_url();?>assets/Llajta/#">Atractivos</a>	
+					<ul class="sub-menu">
+						<li><a href=" <?php echo base_url();?>assets/Llajta/provincias.html">Provincias</a></li>
+						<li><a href=" <?php echo base_url();?>assets/Llajta/index.html">Gastronomia</a></li>
+						<li><a href=" <?php echo base_url();?>assets/Llajta/index.html">Folklore</a></li>
+					</ul>
+				</li>
+				<li><a href=" <?php echo base_url();?>assets/Llajta/experiencias.html">Experiencias</a></li>
+				<li><a href=" <?php echo base_url();?>assets/Llajta/galeria.html">Galeria</a></li>
+      <li><a href="<?=base_url('login')?>"><i class="fa fa-users"></i> Login<span></span></a></li>
+			</ul>
+			<!-- 
+			<div class="header-right">
+				<a href="#" class="hr-btn"><i class="flaticon-029-telephone-1"></i>Emergencia</a>
+				<div class="hr-btn hr-btn-2">+45 332 65767 42</div>
+			</div>
+			-->
+		</nav>
+	</header>
+
+	<!-- Header Section end -->
+

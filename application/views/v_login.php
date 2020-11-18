@@ -1,76 +1,68 @@
 <?php include("header.php"); ?>
 
 
-
-<div class="container">    
+<div class="container">
   <div class="row">
-    <div class="col-sm-4 col-md-offset-4 ">
-      <div class="panel panel-primary">
-        <div class="panel-heading">login</div>
-        <div class="panel-body">
-
-        <?php
-        //NOTIFIACIONES ERROR
-        echo validation_errors('<div class="alert alert-warnig">','</div>');
-        //NOTIFICACION
-
-        if ($this->session->flashdata('warning')) {
-                echo '<div class="alert alert-warning">';
-                echo $this->session->flashdata('warning');
-                echo '</div>';
-        }
-        //notificacion del login
-        if($this->session->flashdata('sukses')){
-            echo '<div class="alert alert-warning">';
-            echo $this->session->flashdata('sukses'); 
-            echo '</div>';
-        }
-            // cambiamo la direccion de base url por login   admin/inputsekolah
-        echo form_open(base_url('login'),'class="form-horizontal" entype="multipart/formdata"');
-        ?>
-        <!-- CREAMOS EL TEXBOX PARA EL USUARIO -->
-        <div class="col-sm-12">
-            <div class="form-group input-group">
-            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-            <input type="text" name="usuario" class="form-control" placeholder="usuario">
-        </div>
-       </div> 
-
-       <!-- CREAMO EL PASSWORD PARA LA CONTRASEÑA -->
-       <div class="col-sm-12">
-            <div class="form-group input-group">
-            <span class="input-group-addon"><i class="fa fa-lock "></i></span>
-            <input type="password" name="password" class="form-control" placeholder="password">
-        </div>
-       </div> 
-
-       <!-- NUESTRO BOTON PARA REGISTRAR -->
-       <div class="col-sm-12">
-            <div class="form-group input-group">
-            
-            <button type="submit" class="btn btn-primary">Login</button>
-            
-        </div>
-       </div> 
-
-        <?php echo form_close(); ?>
-        </div>
-        <div class="panel-footer"></div>
-      </div>
+    <div class="col-4">.col-4</div>
+    <div class="col-4">
+    <div class="login-box">
+        <form class="login-form" action="index.html">
+          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>LOGIN</h3>
+          <div class="form-group">
+            <label class="control-label">CORREO</label>
+            <input class="form-control" type="text" placeholder="Email" autofocus>
+          </div>
+          <div class="form-group">
+            <label class="control-label">CONTRASEÑA</label>
+            <input class="form-control" type="password" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <div class="utility">
+              <div class="animated-checkbox">
+                <label>
+                  <input type="checkbox"><span class="label-text">Stay Signed in</span>
+                </label>
+              </div>
+              <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Registrate ahora</a></p>
+            </div>
+          </div>
+          <div class="form-group btn-container">
+            <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
+          </div>
+        </form>
+        <form class="forget-form" action="index.html">
+          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Registro</h3>
+          <div class="form-group">
+            <label class="control-label">Nombre</label>
+            <input class="form-control" type="text" placeholder="Ingrese su nombre">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Primer Apellido</label>
+            <input class="form-control" type="text" placeholder="Ingrese su Primer Apellido">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Segundo Apellido</label>
+            <input class="form-control" type="text" placeholder="Ingrese su Segundo Apellido">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Email</label>
+            <input class="form-control" type="email" placeholder="Ingrese su email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
+          </div>
+          <div class="tile-footer" align="center">
+              <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-lg fa-check-circle"></i>Registrar
+            </div>
+          <div class="form-group mt-3">
+            <p class="semibold-text mb-0"><a href="#" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Back to Login</a></p>
+          </div>
+        </form>
     </div>
+    <div class="col-4">.col-4</div>
   </div>
-</div>
-<br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
+  </div>
 
 
 <?php include("footer.php"); ?>

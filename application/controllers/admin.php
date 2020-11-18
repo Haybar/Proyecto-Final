@@ -10,6 +10,7 @@ class Admin extends CI_Controller
    {
    parent::__construct();
    $this->load->model('M_usuario');
+   $this->load->model('M_parque');
    $this->load->library('upload');
     ;
    }
@@ -127,6 +128,17 @@ class Admin extends CI_Controller
     $this->M_usuario->EliminarContacto($idUsuario, $data);
     redirect(base_url('admin/usuario'),'refresh');
     }
+
+
+    public function parque()
+    {
+        $this->load->view('admin/header_admin');
+        $data['data']=$this->M_parque->get();
+        $this->load->view('admin/turisticos/v_parque',$data);
+        $this->load->view('admin/footer_admin');
+    }
+
+
 
     // SUBIENDO EL PDF
     public function listaUsuarioPdf()

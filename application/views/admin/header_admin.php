@@ -104,12 +104,13 @@
           </ul>
         </li>
         <li><a class="app-menu__item" href="charts.html"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">Charts</span></a></li>
-        <li class="treeview is-expanded"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Forms</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-list"></i></i><span class="app-menu__label">Atractivo Turistico</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="form-components.html"><i class="icon fa fa-circle-o"></i> Form Components</a></li>
-            <li><a class="treeview-item" href="form-custom.html"><i class="icon fa fa-circle-o"></i> Custom Components</a></li>
-            <li><a class="treeview-item active" href="form-samples.html"><i class="icon fa fa-circle-o"></i> Form Samples</a></li>
-            <li><a class="treeview-item" href="form-notifications.html"><i class="icon fa fa-circle-o"></i> Form Notifications</a></li>
+            <li><a class="treeview-item" href="Balnearios.html"><i class="icon fa fa-shower"></i> Balnearios </a></li>
+            <li><a class="treeview-item" href="CentroCultural.html" target="_blank" rel="noopener"><i class="icon fa fa-home"></i> Centros Culturales </a></li>
+            <li><a class="treeview-item" href="Cines.html"><i class="icon fa fa-film"></i> Cines </a></li>
+            <li><a class="treeview-item" href="Plazas.html" target="_blank" rel="noopener"><i class="icon fa fa-circle-o"></i> Plazas </a></li>
+            <li><a class="treeview-item" href="<?=base_url('admin/parque')?>"><i class="icon fa fa-tree"></i> Parques </a></li>
           </ul>
         </li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Tables</span><i class="treeview-indicator fa fa-angle-right"></i></a>
