@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Login - Vali Admin</title>
+    <title>Login</title>
   </head>
   <body>
     <section class="material-half-bg">
@@ -81,11 +81,11 @@
             <input class="form-control" type="text" placeholder="Ingrese su Segundo Apellido">
           </div>
           <div class="form-group">
-            <label class="control-label">Email</label>
+            <label class="control-label">Correo</label>
             <input class="form-control" type="email" placeholder="Ingrese su email">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+            <label for="exampleInputPassword1">Contraseña</label>
             <input class="form-control" id="exampleInputPassword1" type="password" placeholder="Password">
           </div>
           <div class="tile-footer" align="center">

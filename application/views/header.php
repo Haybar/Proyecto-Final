@@ -46,15 +46,20 @@
 			<ul class="main-menu">
 				<li><a href=" <?php echo base_url();?>assets/turista/index.html" class="active">Inicio</a></li>
 				<li><a href=" <?php echo base_url();?>assets/turista/index.html">Acerca de nosotros</a></li>
-				<li><a href=" <?php echo base_url();?>assets/turista/#">Atractivos</a>	
+				<li><a href=" <?php echo base_url();?>assets/turista/#">Lugares</a>	
 					<ul class="sub-menu">
-						<li><a href=" <?php echo base_url();?>assets/turista/provincias.html">Provincias</a></li>
-						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Gastronomia</a></li>
-						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Folklore</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/provincias.html">Balnearios</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Centros Culturales</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Cines/Teatros</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Plazas</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Parques</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/provincias.html">Iglesias</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Museos</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/experiencias.html">Restaurantes</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/galeria.html">Universidades</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/galeria.html">Instituciones</a></li>
 					</ul>
 				</li>
-				<li><a href=" <?php echo base_url();?>assets/turista/experiencias.html">Experiencias</a></li>
-				<li><a href=" <?php echo base_url();?>assets/turista/galeria.html">Galeria</a></li>
       <li><a href="<?=base_url('login')?>"><i class="fa fa-users"></i> Login<span></span></a></li>
 			</ul>
 			<!-- 
