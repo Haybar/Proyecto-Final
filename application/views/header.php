@@ -5,24 +5,29 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="loans HTML Template">
 	<meta name="keywords" content="loans, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Main CSS-->
+     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
 	
 	<!-- Favicon -->
-	<link href=" <?php echo base_url();?>assets/Llajta/img/favicon.ico" rel="shortcut icon"/>
+	<link href=" <?php echo base_url();?>assets/turista/img/favicon.ico" rel="shortcut icon"/>
 
 	<!-- Google font -->
-	<link href=" <?php echo base_url();?>assets/Llajta/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap," rel="stylesheet">
- 	<link href=" <?php echo base_url();?>assets/Llajta/https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link href=" <?php echo base_url();?>assets/turista/https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap," rel="stylesheet">
+ 	<link href=" <?php echo base_url();?>assets/turista/https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/font-awesome.min.css"/>
-	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/all.min.css"/>
-	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/flaticon.css"/>
-	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/slicknav.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/turista/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/turista/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/turista/css/all.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/turista/css/owl.carousel.min.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/turista/css/flaticon.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/turista/css/slicknav.min.css"/>
 
 	<!-- Main Stylesheets -->
-	<link rel="stylesheet" href=" <?php echo base_url();?>assets/Llajta/css/style.css"/>
+	<link rel="stylesheet" href=" <?php echo base_url();?>assets/turista/css/style.css"/>
 
 </head>
 <body>
@@ -34,22 +39,22 @@
 
 	<!-- Header Section -->
 	<header class="header-section">
-		<a href=" <?php echo base_url();?>assets/Llajta/index.html" class="site-logo">
-			<img src="<?php echo base_url();?>assets/Llajta/img/logoBC.png" alt="">
+		<a href=" <?php echo base_url();?>assets/turista/index.html" class="site-logo">
+			<img src="<?php echo base_url();?>assets/turista/img/logoBC.png" alt="">
 		</a>
 		<nav class="header-nav">
 			<ul class="main-menu">
-				<li><a href=" <?php echo base_url();?>assets/Llajta/index.html" class="active">Inicio</a></li>
-				<li><a href=" <?php echo base_url();?>assets/Llajta/index.html">Acerca de nosotros</a></li>
-				<li><a href=" <?php echo base_url();?>assets/Llajta/#">Atractivos</a>	
+				<li><a href=" <?php echo base_url();?>assets/turista/index.html" class="active">Inicio</a></li>
+				<li><a href=" <?php echo base_url();?>assets/turista/index.html">Acerca de nosotros</a></li>
+				<li><a href=" <?php echo base_url();?>assets/turista/#">Atractivos</a>	
 					<ul class="sub-menu">
-						<li><a href=" <?php echo base_url();?>assets/Llajta/provincias.html">Provincias</a></li>
-						<li><a href=" <?php echo base_url();?>assets/Llajta/index.html">Gastronomia</a></li>
-						<li><a href=" <?php echo base_url();?>assets/Llajta/index.html">Folklore</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/provincias.html">Provincias</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Gastronomia</a></li>
+						<li><a href=" <?php echo base_url();?>assets/turista/index.html">Folklore</a></li>
 					</ul>
 				</li>
-				<li><a href=" <?php echo base_url();?>assets/Llajta/experiencias.html">Experiencias</a></li>
-				<li><a href=" <?php echo base_url();?>assets/Llajta/galeria.html">Galeria</a></li>
+				<li><a href=" <?php echo base_url();?>assets/turista/experiencias.html">Experiencias</a></li>
+				<li><a href=" <?php echo base_url();?>assets/turista/galeria.html">Galeria</a></li>
       <li><a href="<?=base_url('login')?>"><i class="fa fa-users"></i> Login<span></span></a></li>
 			</ul>
 			<!-- 
