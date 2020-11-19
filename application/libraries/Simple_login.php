@@ -44,7 +44,7 @@ else
 public function cek_login()
 {
 if($this->CI->session->userdata('usuario')==""){
-    $this->CI->session->set_flashdata('warning', 'anda belum login');
+    $this->CI->session->set_flashdata('warning', 'Usted no se ha identificado');
     redirect(base_url('login'),'refresh');
     
 }
