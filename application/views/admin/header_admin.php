@@ -137,7 +137,7 @@
     </aside>
     <main class="app-content">
       
-    <div class="app-title">
+    <!-- <div class="app-title">
       <div class="bs-component">
               <ul class="nav nav-tabs">
                 <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#home">INICIO</a></li>
@@ -148,19 +148,12 @@
                   </div>
                 </li>
               </ul>
-               </div>
+               </div> -->
       
       </div>
 
 
-
-
-
-
-
-
-
-
+    
 
 
 <!-- ========================================================================================================================================================-->   

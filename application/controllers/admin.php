@@ -139,112 +139,116 @@ class Admin extends CI_Controller
     }
 
 
-
-    // SUBIENDO EL PDF
-    public function listaUsuarioPdf()
+    public function insert()
     {
-        $this->load->library('pdf');
-        $lista = $this->Model_login->retornarRegistro();
-        $lista = $lista->result();
-        $this->pdf = new pdf();
-        $this->pdf->AddPage();
-        $this->pdf->SetFont('Arial', 'B', 9);
-        $this->pdf->Cell(30, 10, 'NOMBRE',);
-        $this->pdf->Cell(30, 10, 'USUARIO',);
-        $this->pdf->Cell(30, 10, 'PASSWORD',);
-
-        $this->pdf->Ln(10);
-
-        foreach ($lista as $row) {
-            $nombre = $row->nombre;
-            $usuario = $row->usuario;
-            $password = $row->password;
-           
-            $this->pdf->Cell(30, 10, $nombre);
-            $this->pdf->Cell(30, 10, $usuario);
-            $this->pdf->Cell(30, 10, $password);
-           
-            $this->pdf->Ln(10);
+        $this->load->view('admin/header_admin');
+        $this->load->library('googlemaps');
+        $config['center']= '-17.393487, -66.157695';
+        $config['zoom']='15';
+        $this->googlemaps->initialize($config);
+        $marker['position']='-17.393487, -66.157695';
+        
+        $marker['draggable']= true;
+        $marker['ondragend']='setMapToForm(event.latLng.lat(),event.latLng.lng());';
+        $this->googlemaps->add_marker($marker);
+        
+        //validacion input
+        $valid=$this->form_validation;
+        
+        $valid->set_rules('Par_direccion','Par_direccion(Par_direccion)','required', array('required' =>'llene el campo %s'));
+        //aqui podemos poner los datos restantes para poder validar con php
+       
+        if ($valid->run()==FALSE) {
+            $data['map']= $this->googlemaps->create_map();
+        $this->load->view('admin/turisticos/v_insertParque',$data);
+            
         }
-        $this->pdf->Output('listaDeUsuario  .pdf', 'I');
-    }
-    public function agregar()
-    {
-        $this->load->view('header_admin');
-
-        $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('nombre', 'nombre', 'required');
-        $this->form_validation->set_rules('usuario', 'usuario', 'required',   array('required' => 'Debe indicar %s.'));
-        if ($this->form_validation->run() == FALSE) {
-            $this->load->view('agregarformRegistro');
-        } else {
-            $this->load->view('form_completado');
+        else 
+        {   
+            $i=$this->input;
+            $data = array('Par_descripccion'=> $i->post('Par_descripccion'),
+                            'Par_direccion'=> $i->post('Par_direccion'),
+                             'latitude'=> $i->post('latitude'),
+                            'longitude'=> $i->post('longitude'),                   
+                            'Par_horarioAtencion'=> $i->post('Par_horarioAtencion'),                   
+                            'Par_precioIngreso'=> $i->post('Par_precioIngreso'),                   
+                         );
+                         $this->M_parque->insert($data);
+                         
+                         $this->session->set_flashdata('sukses', 'Se registro con existo!');
+                         
+                         redirect(base_url('admin/parque'),'refresh');
         }
-        $this->load->view('footer_admin');
-    }
-    public function agregardb()
-    {
-        $nombre = $_POST['nombre'];
-        $data['nombre'] = $nombre;  //importante agregar los atributos
-
-        $usuario = $_POST['usuario'];
-        $data['usuario'] = $usuario;
-
-        $password = $_POST['password'];
-        $data['password'] = $password;
-
-        $apellido = $_POST['apellido'];
-        $data['apellido'] = $apellido;
-
-        $email = $_POST['email'];
-        $data['email'] = $email;
-
-        $this->Model_login->agregarUsuario($data);
-        $this->load->view('header_admin');
-        redirect(base_url('admin/SelectUsuario'), 'refresh');
-        $this->load->view('footer_admin');
+        $this->load->view('admin/footer_admin');
     }
 
-    public function modificar()
-    {
-        $id = $_POST['id'];
-        $data['usuario'] = $this->Model_login->recuperarUsuario($id);
-        $this->load->view('header_admin');
-        $this->load->view('modificarUsuarioform', $data);
-        $this->load->view('footer_admin');
-    }
-    public function modificardb()
-    {
-        $id = $_POST['id'];
-        $nombre = $_POST['nombre'];
-        $data['nombre'] = $nombre;
+      // START UPDATE
+      public function updateInsti($id)
+      {
+          
+          $this->load->view('admin/header_admin');
+          $this->load->library('googlemaps');
+          $config['center']= '-17.393487, -66.157695';
+          $config['zoom']='15';
+          $this->googlemaps->initialize($config);
+          $marker['position']='-17.393487, -66.157695';
+          $marker['draggable']= true;
+          $marker['ondragend']='setMapToForm(event.latLng.lat(),event.latLng.lng());';
+          $this->googlemaps->add_marker($marker);
+  
+          $instituciones=$this->M_parque->detail($id); //update
+          
+          //validacion input
+          $valid=$this->form_validation;
+          
+          $valid->set_rules('Par_direccion','Par_direccion(s)','required', array('required' =>'llene el campo %s'));
+          
+          if ($valid->run()==FALSE) {
+              $map= $this->googlemaps->create_map();
+              $data=array(
+                  'map' => $map, 
+                  'institucion' =>$instituciones
+          );
+  
+          $this->load->view('admin/turisticos/v_updateParque',$data, False);      
+          }
+          else 
+          {   
+              $i=$this->input;
+              $data = array(
+                              'idParque' => $id,
+                              'Par_descripccion'=> $i->post('Par_descripccion'),
+                              'Par_direccion'=> $i->post('Par_direccion'),
+                              'latitude'=> $i->post('latitude'),
+                              'longitude'=> $i->post('longitude'),
+                            
+                              'Par_horarioAtencion'=> $i->post('Par_horarioAtencion'),
+                              'Par_precioIngreso'=> $i->post('Par_precioIngreso'),
+                              
+                           );
+  
+                           $this->M_parque->update($data);
+                           $this->session->set_flashdata('sukses', 'Se registro con existo!');
+                           
+                           redirect(base_url('admin/parque'),'refresh');
+          }
+          $this->load->view('admin/footer_admin');
+      }
+      // HERE END UPDATE
 
-        $usuario = $_POST['usuario'];
-        $data['usuario'] = $usuario;
+      public function EliminarParque()
+      {
+      $idParque=$_POST['idParque'];
+      $data['estado']=0;
+      $this->M_parque->EliminarParque($idParque, $data);
+      redirect(base_url('admin/parque'),'refresh');
+      }
 
-        $password = $_POST['password'];
-        $data['password'] = $password;
 
-     
+   
+    
 
-        $this->Model_login->modificarlogin($id, $data);
-        $this->load->view('header_admin');
-        redirect(base_url('home/selectCrud'), 'refresh');
-        $this->load->view('footer_admin');
-    }
 
-    // NUESTRO CONTROLADOR PARA ELIMINAR
-    public function eliminardb()
-    {
-        $id = $_POST['id'];
-        $nombre = $_POST['nombre'];
-        $data['nombre'] = $nombre;
-        $this->Model_login->eliminarLogin($id);
-        $this->load->view('header_admin');
-        redirect(base_url('home/selectCrud'), 'refresh');
-        $this->load->view('footer_admin');
-    }
 
 
 }
